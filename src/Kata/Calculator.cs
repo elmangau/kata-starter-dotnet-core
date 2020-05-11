@@ -22,6 +22,13 @@ namespace Kata
             var numbers = input.Split(separator, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse);
 
+            if (numbers.Any(n => n < 0))
+            {
+                var x = numbers.FirstOrDefault(n => n < 0);
+                
+                throw new Exception("negatives not allowed: " + x.ToString());
+            }
+            
             return numbers.Sum();
         }
     }
