@@ -1,10 +1,10 @@
-namespace Kata.Spec
+namespace Kata
 {
     public class Calculator
     {
-        public int Add()
+        public int Add(string input = "")
         {
-            return -1;
+            return 0;
         }
     }
 }
