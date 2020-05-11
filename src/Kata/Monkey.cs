@@ -18,3 +18,5 @@ namespace Kata
         }
     }
 }
+
+// GitHub Commit Test
