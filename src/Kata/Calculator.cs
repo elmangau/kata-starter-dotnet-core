@@ -12,7 +12,7 @@ namespace Kata
                 return 0;                
             }
 
-            var numbers = input.Split(",", StringSplitOptions.RemoveEmptyEntries)
+            var numbers = input.Split(new [] {",", "\n"}, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse);
 
             return numbers.Sum();
