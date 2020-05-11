@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace Kata
 {
@@ -11,14 +12,10 @@ namespace Kata
                 return 0;                
             }
 
-            var numbers = input.Split(",", StringSplitOptions.RemoveEmptyEntries);
+            var numbers = input.Split(",", StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse);
 
-            if (numbers.Length >= 2)
-            {
-                return int.Parse(numbers[0]) + int.Parse(numbers[1]);
-            }
-
-            return int.Parse(input);
+            return numbers.Sum();
         }
     }
 }
